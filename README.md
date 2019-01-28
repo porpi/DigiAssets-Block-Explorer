@@ -1,15 +1,15 @@
-# Colored Coins Block-Explorer
+# DigiAssets Block-Explorer
 [![Build Status][travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Slack Channel][slack-image]][slack-url]
 
 [![js-standard-style][js-standard-image]][js-standard-url]
 
-> The ColoredCoins Block Explorer server
+> The DigiAssets Block Explorer server
 
 ### System Requirements
 
-1. Bitcoind that runs as an RPC server with txindex=1
-2. Mongodb
-3. At least a 1.5TB hard-drive (The current size of the data is around 1TB, as of November 2016)
+1. digibyted that runs as an RPC server with txindex=1
+2. PostgreSQL (Mongodb cannot be used do to 16mb document limit)
+3. At least a 112GB hard-drive (The current size of the data is around 100GB, as of January 2019)
 
 
 ### Installation
@@ -75,7 +75,7 @@ dir=db/
 #user=
 #pass=
 
-#Your Bitcoind server settings
+#Your DigiByted server settings
 [bitcoin_rpc]
 ssl=false
 url=localhost
@@ -123,7 +123,5 @@ mempool_only=false
 [daviddm-url]: https://david-dm.org/Colored-Coins/Colored-Coins-Block-Explorer
 [coveralls-image]: https://coveralls.io/repos/Colored-Coins/Colored-Coins-Block-Explorer/badge.svg
 [coveralls-url]: https://coveralls.io/r//Colored-Coins/Colored-Coins-Block-Explorer
-[slack-image]: http://slack.coloredcoins.org/badge.svg
-[slack-url]: http://slack.coloredcoins.org
 [mocha]: https://www.npmjs.com/package/mocha
 [gulp]: http://gulpjs.com/
