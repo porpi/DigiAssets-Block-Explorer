@@ -1,7 +1,4 @@
 # DigiAssets Block-Explorer
-[![Build Status][travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Slack Channel][slack-image]][slack-url]
-
-[![js-standard-style][js-standard-image]][js-standard-url]
 
 > The DigiAssets Block Explorer server
 
