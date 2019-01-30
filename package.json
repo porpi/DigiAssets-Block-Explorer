@@ -1,7 +1,7 @@
 {
-  "name": "cc-block-explorer",
+  "name": "digiasset-block-explorer",
   "version": "1.0.2",
-  "description": "Colored Coins Block Explorer",
+  "description": "DigiAssets Block Explorer",
   "main": "app.js",
   "dependencies": {
     "async": "~0.9.0",
@@ -9,12 +9,12 @@
     "bitcoinjs-lib": "^1.5.6",
     "bs58": "^3.0.0",
     "casimircore": "git+https://github.com/Colored-Coins/casimircore.git#postgres",
-    "cc-block-parser": "git+https://github.com/Colored-Coins/Parser.git#sql",
+    "digiasset-block-parser": "git+https://github.com/DigiByte-Core/DigiAssets-Parser.git#sql",
     "sequelize": "^3.19.3",
     "squel": "^5.0.3",
     "nodejs-sql": "git+https://github.com/oleiba/nodejs-sql.git",
-    "cc-errors": "~0.0.6",
-    "cc-request-id": "~0.0.3",
+    "digiasset-errors": "~0.0.6",
+    "digiasset-request-id": "~0.0.3",
     "coinstring": "^2.3.0",
     "commander": "^2.9.0",
     "ecdsa": "^0.6.0",
@@ -30,8 +30,8 @@
     "validator": "^3.27.0"
   },
   "bin": {
-    "cc-explorer": "./bin/cc-block-explorer",
-    "cc-block-explorer": "./bin/cc-block-explorer"
+    "digiasset-explorer": "./bin/digiasset-block-explorer",
+    "digiasset-block-explorer": "./bin/digiasset-block-explorer"
   },
   "devDependencies": {
     "chai": "^2.3.0",

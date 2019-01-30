@@ -12,7 +12,7 @@ properties.scanner.mempool_only = process.env.MEMPOOLONLY || properties.scanner 
 properties.sockets.all_channels = process.env.ALLCHANNELS || properties.sockets.all_channels
 
 var Sockets = require('./app/modules/sockets.js')
-var Scanner = require('cc-block-parser')
+var Scanner = require('digiasset-block-parser')
 var scanner
 
 process.on('message', function (msg) {

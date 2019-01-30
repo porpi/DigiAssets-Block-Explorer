@@ -2,7 +2,7 @@ var bitcoin = require('bitcoinjs-lib')
 var async = require('async')
 var moment = require('moment')
 var Cache = require('ttl')
-var errors = require('cc-errors')
+var errors = require('digiasset-errors')
 
 var casimir = global.casimir
 var properties = casimir.properties
