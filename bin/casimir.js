@@ -1,6 +1,6 @@
 var url = require('url')
-var errorHandler = require('cc-errors').errorHandler
-var requestId = require('cc-request-id')
+var errorHandler = require('digiasset-errors').errorHandler
+var requestId = require('digiasset-request-id')
 var casimir_core = require('casimircore')()
 var properties = casimir_core.properties(__dirname + '/../config/')
 if (properties.ENV.type === 'development') process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
