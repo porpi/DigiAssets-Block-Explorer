@@ -46,7 +46,7 @@
     "casimir": "npm install && nodemon",
     "test": "NODE_ENV=QA istanbul cover _mocha -- -R tap > test-reports.tap && istanbul report html",
     "ci-mocha-test": "NODE_ENV=QA mocha -R xunit > test-reports.xml",
-    "start": "sudo node app.js",
+    "start": "node app.js",
     "ci-coverage-test": "NODE_ENV=QA istanbul cover _mocha -- -R tap > test-reports.tap && istanbul report cobertura",
     "ci-full": "NODE_ENV=QA LOG_XUNIT=true XUNIT_FILE=test-reports.xml istanbul cover _mocha -- -R xunit-file",
     "test-windows": ".\\node_modules\\.bin\\istanbul cover .\\node_modules\\mocha\\bin\\_mocha\\ -- -R tap > .\\test-reports.tap && istanbul report html"
