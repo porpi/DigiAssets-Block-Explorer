@@ -9,7 +9,7 @@ var properties = casimir.properties
 properties.roles = {
   SCANNER: 'SCANNER',
   FIXER: 'FIXER',
-  CC_PARSER: 'CC_PARSER',
+  DA_PARSER: 'DA_PARSER',
   API: 'API'
 }
 
@@ -23,7 +23,7 @@ var workers = {}
 var api_workers_ids = []
 var scanner_worker
 var fixer_worker
-var cc_parser
+var da_parser
 
 var listen = function (worker) {
   worker.on('message', function (data) {
@@ -34,8 +34,8 @@ var listen = function (worker) {
       case properties.roles.FIXER:
         fixer_worker.send(data)
         break
-      case properties.roles.CC_PARSER:
-        cc_parser.send(data)
+      case properties.roles.DA_PARSER:
+        da_parser.send(data)
         break
       default:
         api_workers_ids.forEach(function (worker_id) {
@@ -59,11 +59,11 @@ if (cluster.isMaster) {
       // Fork workers.
       scanner_worker = fork(properties.roles.SCANNER)
       fixer_worker = fork(properties.roles.FIXER)
-      cc_parser = fork(properties.roles.CC_PARSER)
+      da_parser = fork(properties.roles.DA_PARSER)
       // Register workers to the message bus
       listen(scanner_worker)
       listen(fixer_worker)
-      listen(cc_parser)
+      listen(da_parser)
       var worker = fork(properties.roles.API)
       api_workers_ids.push(worker.id)
       listen(worker)
@@ -85,9 +85,9 @@ if (cluster.isMaster) {
             fixer_worker = fork(properties.roles.FIXER)
             listen(fixer_worker)
             break
-          case cc_parser.id:
-            cc_parser = fork(properties.roles.CC_PARSER)
-            listen(cc_parser)
+          case da_parser.id:
+            da_parser = fork(properties.roles.DA_PARSER)
+            listen(da_parser)
             break
           default:
             var new_worker = fork(properties.roles.API)

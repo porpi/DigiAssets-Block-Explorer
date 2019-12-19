@@ -79,7 +79,7 @@ async.waterfall([
     if (properties.scanner.scan === 'true' && properties.scanner.mempool_only !== 'true') {
       if (process.env.ROLE === properties.roles.SCANNER) scanner.scan_blocks()
       if (process.env.ROLE === properties.roles.FIXER) scanner.fix_blocks()
-      if (process.env.ROLE === properties.roles.CC_PARSER) scanner.parse_cc()
+      if (process.env.ROLE === properties.roles.DA_PARSER) scanner.parse_da()
     }
     if (properties.scanner.mempool_only === 'true') {
       if (process.env.ROLE === properties.roles.SCANNER) scanner.scan_mempol_only()
