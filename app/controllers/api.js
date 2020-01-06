@@ -967,7 +967,7 @@ var find_asset_info = function (assetId, options, callback) {
     '    SELECT\n' +
     '      transactions.txid,\n' +
     '      transactions.blockheight,\n' +
-    '      transactions.ccdata::JSON->0->>\'type\' AS type\n' +
+    '      transactions.dadata::JSON->0->>\'type\' AS type\n' +
     '    FROM\n' +
     '      transactions\n' +
     '    ) AS transactions ON transactions.txid = outputs.txid) AS assetsoutputs\n' +
